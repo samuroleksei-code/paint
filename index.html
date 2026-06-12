@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="uk">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,37 +13,37 @@
           <span class="brand-mark" aria-hidden="true"></span>
           <div>
             <h1>Paint Studio</h1>
-            <p>Холст для быстрых набросков</p>
+            <p>Полотно для швидких ескізів</p>
           </div>
         </div>
 
-        <div class="document-controls" aria-label="Размер холста">
+        <div class="document-controls" aria-label="Розмір полотна">
           <label>
             <span>Ширина</span>
             <input id="canvasWidth" type="number" min="240" max="3000" step="10" value="1280" />
           </label>
           <label>
-            <span>Высота</span>
+            <span>Висота</span>
             <input id="canvasHeight" type="number" min="180" max="2200" step="10" value="780" />
           </label>
-          <button id="resizeCanvas" class="button secondary" type="button">Применить</button>
+          <button id="resizeCanvas" class="button secondary" type="button">Застосувати</button>
         </div>
 
         <div class="file-actions" aria-label="Файл">
-          <label class="button secondary file-button" title="Открыть изображение">
+          <label class="button secondary file-button" title="Відкрити зображення">
             <input id="imageLoader" type="file" accept="image/*" />
-            <span>Открыть</span>
+            <span>Відкрити</span>
           </label>
-          <button id="downloadPng" class="button primary" type="button">Сохранить PNG</button>
+          <button id="downloadPng" class="button primary" type="button">Зберегти PNG</button>
         </div>
       </header>
 
       <main class="workspace">
-        <aside class="tool-panel" aria-label="Инструменты">
+        <aside class="tool-panel" aria-label="Інструменти">
           <section class="panel-section">
-            <h2>Инструменты</h2>
+            <h2>Інструменти</h2>
             <div class="tool-grid" id="toolGrid">
-              <button class="tool-button is-active" type="button" data-tool="brush" title="Кисть" aria-label="Кисть">
+              <button class="tool-button is-active" type="button" data-tool="brush" title="Пензель" aria-label="Пензель">
                 <span class="tool-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path d="m4 20 4.2-1.1L19.1 8a2.4 2.4 0 0 0 0-3.4 2.4 2.4 0 0 0-3.4 0L4.8 15.5 4 20Z" />
@@ -52,7 +52,7 @@
                   </svg>
                 </span>
               </button>
-              <button class="tool-button" type="button" data-tool="eraser" title="Ластик" aria-label="Ластик">
+              <button class="tool-button" type="button" data-tool="eraser" title="Гумка" aria-label="Гумка">
                 <span class="tool-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path d="m3.5 14.5 8.4-8.4a2 2 0 0 1 2.8 0l5.8 5.8a2 2 0 0 1 0 2.8L15.2 20H8.1l-4.6-4.6a.7.7 0 0 1 0-.9Z" />
@@ -71,7 +71,7 @@
                   </svg>
                 </span>
               </button>
-              <button class="tool-button" type="button" data-tool="picker" title="Пипетка" aria-label="Пипетка">
+              <button class="tool-button" type="button" data-tool="picker" title="Піпетка" aria-label="Піпетка">
                 <span class="tool-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path d="m14.5 5 4.5 4.5" />
@@ -80,7 +80,7 @@
                   </svg>
                 </span>
               </button>
-              <button class="tool-button" type="button" data-tool="line" title="Линия" aria-label="Линия">
+              <button class="tool-button" type="button" data-tool="line" title="Лінія" aria-label="Лінія">
                 <span class="tool-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path d="M5 19 19 5" />
@@ -89,7 +89,7 @@
                   </svg>
                 </span>
               </button>
-              <button class="tool-button" type="button" data-tool="rect" title="Прямоугольник" aria-label="Прямоугольник">
+              <button class="tool-button" type="button" data-tool="rect" title="Прямокутник" aria-label="Прямокутник">
                 <span class="tool-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <rect x="5" y="6" width="14" height="12" rx="1.5" />
@@ -98,7 +98,7 @@
                   </svg>
                 </span>
               </button>
-              <button class="tool-button" type="button" data-tool="ellipse" title="Эллипс" aria-label="Эллипс">
+              <button class="tool-button" type="button" data-tool="ellipse" title="Еліпс" aria-label="Еліпс">
                 <span class="tool-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <ellipse cx="12" cy="12" rx="8" ry="6.5" />
@@ -120,35 +120,35 @@
           </section>
 
           <section class="panel-section shapes-section">
-            <h2>Фигуры</h2>
-            <div class="shape-grid" id="shapeGrid" aria-label="Фигуры"></div>
+            <h2>Фігури</h2>
+            <div class="shape-grid" id="shapeGrid" aria-label="Фігури"></div>
           </section>
 
           <section class="panel-section">
-            <h2>Кисть</h2>
+            <h2>Пензель</h2>
             <label class="range-row">
-              <span>Размер</span>
+              <span>Розмір</span>
               <output id="sizeOutput">8</output>
               <input id="brushSize" type="range" min="1" max="72" value="8" />
             </label>
             <label class="range-row">
-              <span>Прозрачность</span>
+              <span>Прозорість</span>
               <output id="opacityOutput">100%</output>
               <input id="opacity" type="range" min="5" max="100" value="100" />
             </label>
             <div class="toggle-row">
               <label>
                 <input id="fillShape" type="checkbox" />
-                <span>Заливка фигур</span>
+                <span>Заливка фігур</span>
               </label>
             </div>
           </section>
 
           <section class="panel-section">
-            <h2>Цвет</h2>
+            <h2>Колір</h2>
             <div class="color-pair">
               <label>
-                <span>Основной</span>
+                <span>Основний</span>
                 <input id="primaryColor" type="color" value="#1f2937" />
               </label>
               <label>
@@ -156,27 +156,27 @@
                 <input id="backgroundColor" type="color" value="#ffffff" />
               </label>
             </div>
-            <div class="swatches" id="swatches" aria-label="Быстрые цвета"></div>
+            <div class="swatches" id="swatches" aria-label="Швидкі кольори"></div>
           </section>
 
           <section class="panel-section">
-            <h2>Действия</h2>
+            <h2>Дії</h2>
             <div class="action-grid">
-              <button id="undo" class="button secondary" type="button">Отмена</button>
-              <button id="redo" class="button secondary" type="button">Повтор</button>
-              <button id="clearCanvas" class="button danger" type="button">Очистить</button>
+              <button id="undo" class="button secondary" type="button">Скасувати</button>
+              <button id="redo" class="button secondary" type="button">Повторити</button>
+              <button id="clearCanvas" class="button danger" type="button">Очистити</button>
             </div>
           </section>
         </aside>
 
-        <section class="canvas-stage" aria-label="Рабочая область">
+        <section class="canvas-stage" aria-label="Робоча область">
           <div class="stage-toolbar">
-            <div class="status-line" id="statusLine">Кисть · 1280 × 780</div>
+            <div class="status-line" id="statusLine">Пензель · 1280 × 780</div>
             <div class="zoom-controls" aria-label="Масштаб">
-              <button id="zoomOut" class="icon-button" type="button" title="Уменьшить" aria-label="Уменьшить">−</button>
+              <button id="zoomOut" class="icon-button" type="button" title="Зменшити" aria-label="Зменшити">−</button>
               <span id="zoomLabel">100%</span>
-              <button id="zoomIn" class="icon-button" type="button" title="Увеличить" aria-label="Увеличить">+</button>
-              <button id="fitCanvas" class="button secondary" type="button">Вписать</button>
+              <button id="zoomIn" class="icon-button" type="button" title="Збільшити" aria-label="Збільшити">+</button>
+              <button id="fitCanvas" class="button secondary" type="button">Вписати</button>
             </div>
           </div>
 
